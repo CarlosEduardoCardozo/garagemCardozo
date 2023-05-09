@@ -28,6 +28,12 @@ class Cor(models.Model):
         verbose_name = "Cor"
         verbose_name_plural = "Cors"
     
+class Modelo(models.Model):
+    descricao = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.descricao
+
 class Veiculo(models.Model):
     marca = models.ForeignKey(Marca, on_delete=models.PROTECT)
     categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT)
