@@ -3,13 +3,15 @@ from django.urls import include, path
 
 from rest_framework.routers import DefaultRouter
 
-from garagem.views import CategoriaViewSet, CorViewSet, AcessorioViewSet, ModeloViewSet
+from garagem.views import CategoriaViewSet, CorViewSet, AcessorioViewSet, ModeloViewSet, VeiculoViewSet
 
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"cor", CorViewSet)
 router.register(r"acessorio", AcessorioViewSet)
 router.register(r"modelo", ModeloViewSet)
+router.register(r"veiculo", VeiculoViewSet)
+
 
 
 
